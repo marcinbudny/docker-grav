@@ -29,7 +29,7 @@ ln -sf /apps/bash.bashrc /.bashrc
 # install.  You can find the package names here...
 # https://pkgs.alpinelinux.org/packages?name=php-%25&repo=all&arch=x86_64&maintainer=all
 
-apk --update add \
+apk --update-cache add \
     php-ctype \
     php-curl \
     php-dom \
@@ -43,6 +43,8 @@ apk --update add \
     php-xml \
     php-xmlreader \
     php-zip
+
+apk upgrade
 
 mkdir -p /setup/grav; cd /setup/grav
 wget https://github.com/getgrav/grav/releases/download/$GRAV_VERSION/grav-admin-v$GRAV_VERSION.zip
@@ -60,6 +62,7 @@ mv logs logs-dist
 mv user user-dist; mv user-dist/plugins plugins-sticky
 mv assets assets-dist
 mv images images-dist
+mv tmp tmp-dist
 
 # Add additional setup commands for your production image here, if any.
 # ...
