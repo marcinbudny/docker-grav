@@ -1,3 +1,5 @@
+**NOTE**: This is a fork from original [docker-grav](https://github.com/garywiz/docker-grav) repository by Gary Wisniewski. Changes have been made in order to run 1.2.0 version of the Grav CMS.
+
 # Grav Flat-File CMS Docker Image
 
 Grav is a fast, simple, flexible web-platform.  This is a Docker image that makes it trivial to fire-up and use Grav.
